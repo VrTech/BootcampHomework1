@@ -1,23 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
+
 body {
     /*background-image: url("BG/cat.gif");*/
     background-color: #AAAAAA;
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;              /* optional, center the image */
+    width: 100%;
+    margin: 0;
+    font-family: 'Josefin Slab',sans-serif;
+    position: absolute;
+    font-size: 1em;
+}
+
+#wrap
+{
+	width : 100vw;
+	height: 100vh;
+	overflow: all;
+}
+
+header
+{
+	border: 2px solid #000;
+	width: 90%;
+	height: auto;
+	margin: 5vw;
+}
+
+#header-info
+{
+	font-size: 2em;
+	padding: 25px;
+}
+
+#header-p
+{
+	font-size: 1.2em;
+	padding-left: 25px;
+}
+
+nav
+{
+	position: relative;
+}
+
+nav ul
+{
+	list-style: :none;
+	text-align:right;
+	padding-left: 25px;
+}
+
+nav ul li
+{
+	display: inline;
+	text-decoration: none;
+	padding-right: 30px;
+}
+
+nav ul li a
+{
+	text-decoration: none;
+	color:black;
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.left-c
+{
+	width: 20vw;
+	height:auto;
+	border: 2px dashed #000;
+	margin-left: 5vw;
+	margin-top: 10px;
+	padding: 2.5vw;
+}
+
+#blue
+{
+	background-color: blue;
+}
+#purple
+{
+	background-color: purple;
+}
+#yellow
+{
+	background-color: yellow;
+}
+#red
+{
+	background-color: red;
+}
+
+.left-column-elements
+{
+	text-align: :center;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 p
 {
-
+	font-family: 'Josefin Slab', sans-serif;
 	color: white;
+}
 
+h1
+{
+	font-family: 'Josefin Slab', sans-serif; letter-spacing: 20px;
+}
+
+h1.title
+{
+	margin: 10px 0px 0px 0px; font-size: 550%;text-align: center;
+}
+
+p.center
+{
+	margin: 20 auto; text-align: center;
 }
 
 
 p.left
 {
-	height: all;
-	width: 1000px;
+
 }
 
 h1
@@ -25,7 +130,40 @@ h1
 	color:white;
 }
 
-li
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(125,125,125,0.3);
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li.menu {
+    float: left;
+}
+
+li.menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.menu a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+#thisisID
 {
-	color:white;
+
 }
