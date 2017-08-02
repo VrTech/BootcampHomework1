@@ -1,0 +1,31 @@
+body {
+    /*background-image: url("BG/cat.gif");*/
+    background-color: #AAAAAA;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+}
+
+p
+{
+
+	color: white;
+
+}
+
+
+p.left
+{
+	height: all;
+	width: 1000px;
+}
+
+h1
+{
+	color:white;
+}
+
+li
+{
+	color:white;
+}
