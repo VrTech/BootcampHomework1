@@ -27,8 +27,8 @@ header
 
 #header-info
 {
-	font-size: 2em;
 	padding: 25px;
+	font-size: 2em;
 }
 
 #header-p
@@ -90,8 +90,8 @@ nav ul li a
 {
 	background-color: red;
 }
-
 .left-column-elements
+
 {
 	text-align: :center;
 	padding-top: 5px;
@@ -119,9 +119,97 @@ p.center
 	margin: 20 auto; text-align: center;
 }
 
-
-p.left
+.top
 {
+    clear: both;
+    display: table;
+/*    background-color: rgb(125,200,125);*/
+}
+
+.left
+{	
+	display: inline;
+	float: left;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+.content
+{
+	display: inline;
+	float: right;
+	width: 30%;
+	padding-right: 10vw;
+}
+
+
+.right
+{
+	float: left;
+    padding: 105px;
+	width: 50%;
+	margin-top: 200px;
+	margin-bottom: 20px;
+	margin-right: 50px;
+	border: 2px solid #000;
+}
+
+.gallery
+{
+	display: table;
+	margin-left: 50px;
+}
+
+.contact
+{
+
+	display: table;
+	margin-left: 50px;
+
+}
+
+.reward
+{
+
+    color: white;
+	text-decoration: none;
+
+}
+
+.preview
+{
+
+	width:23.5%; 
+	height:23.5%;
+	margin: 0 0;
+	transition: width 0.2s;
+}
+
+.preview:hover
+{
+
+	width:25%;
+
+}
+
+.footer
+{
+
+		background-color: rgba(125,225,125,0.25);
+		width: 100%;
+		height: 10vh;
+		vertical-align: middle;
+		border:2px solid:#000;
+
+}
+
+.footer-text
+{
+	padding-top:30px;
+	color:white;
+	text-align: center;
 
 }
 
@@ -151,12 +239,17 @@ li.menu a {
     color: white;
     text-align: center;
     padding: 14px 50px;
+    letter-spacing: 0px;
     text-decoration: none;
+    transition: letter-spacing 0.5s;
 }
 
 /* Change the link color to #111 (black) on hover */
 li.menu a:hover {
     background-color: #111;
+    letter-spacing: 5px;
+    color: rgb(125,255,125);
+
 }
 
 .active {
