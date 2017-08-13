@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(200,200,200); 
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container
+{
+    margin: 2vw 0;
+    border: 2px solid #000;
+    /*background-color: white;*/
+
+    text-align: center;
+}
+
+.container-cover
+{
+    padding: 20vh 0;
+    border: 2px solid #000;
+    /*background-color: white;*/
+
+    text-align: center;
+}
+
+p.icon
+{
+	margin: 0 0;
+	letter-spacing: 8px;
+
+}
+
+p.sub
+{
+   	font-size: 16px;
+   	font-weight: 400;
+   	letter-spacing: 1.5px;
+}
+
+p.cover
+{
+
+	font-size: 36px;
+   	font-weight: 400;
+}
