@@ -1,25 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>SOUNDMOTION</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="lib/p5.js"></script>
+    <script src="lib/p5.play.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+    <script src="sketch.js"></script>
 </head>
+
 <body>
-<div class="container">
-<p class="sub">SOUND MOTION</p>
-<p class="fa fa-volume-up icon" style="font-size:24px"></p>
-<p class="fa icon" style="font-size:24px">&#xf2a2;</p>
-<p class="fa fa-group icon" style="font-size:24px"></p>
-</div>
+    <div class="container">
+        <p class="sub">SOUND MOTION</p>
+        <p class="fa fa-volume-up icon" style="font-size:24px; color:lightgreen"></p>
+        <p class="fa icon" style="font-size:24px; color:burlywood">&#xf2a2;</p>
+        <p class="fa fa-group icon" style="font-size:24px; color:rosybrown"></p>
+    </div>
 
-<div class="container-cover">
-<p class="cover">Great motion needs great sounds</p>
-</div>
+    <div class="container-cover">
+        <div id="sketch">
+        </div>
+        <!-- <p class="cover">Great motion needs great sounds</p> -->
+    </div>
 
+    <div class="container-top">
+        <p>Various sounds and elements which can be combined to the master piece</p>
+    </div>
 
-    <!-- <script src="main.js"></script> -->
+    <div class="container">
+        <div class="button greenbutton">
+            <div class="bText">Play</div>
+        </div>
+        <div class="button">
+            <div class="bText">Sign up</div>
+        </div>
+        <div class="button">
+            <div class="bText">Login</div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="title">
+            <h1>What is Sound Motion?</h1>
+        </div>
+        <div class="description">
+            <p>Motion Sound is the first and only comprehensive sound design with complex needs of motion graphics producers.
+                From accents and wooshes, to zips, beeps, and boings, you'll have everything you need to create your next
+                animation, infographic, or explainer video</p>
+            <img class="imgcenter" src="img/what.gif">
+        </div>
+
+    </div>
+    <hr>
+    <div class="container">
+        <h1>Melody Community</h1>
+    </div>
+    <div class="description">
+        <p>Motion Sound is the first and only comprehensive sound design with complex needs of motion graphics producers. From
+            accents and wooshes, to zips, beeps, and boings, you'll have everything you need to create your next animation,
+            infographic, or explainer video</p>
+            <img class="note" src="img/N2.svg"><img class="birdy" src="img/bird.svg"><img class="note" src="img/N1.svg">
+        <img class="imgcenter" src="img/green.svg">
+    </div>
+    </div>
+    <hr>
+    <div class="container">
+        <h1>Features</h1>
+        <div class="container-content">
+            <div class="content-left">
+                <img src="img/music.svg" class="featureicon">
+            </div>
+            <div class="content-right">
+                <p><b>Creating</b> - We believe that a great sound design library has an array of original concepts, and many
+                    slight variations on those concepts. You want a woosh effect, but you also want 30-40 variations of a
+                    woosh, or else your library will get stale, and fast.</p>
+            </div>
+        </div>
+
+        <div class="container-content">
+            <div class="content-left">
+                <img src="img/mobile.svg" class="featureicon">
+            </div>
+            <div class="content-right">
+                <p><b>Dynamic</b> - We believe that a great sound design library has an array of original concepts, and many
+                    slight variations on those concepts. You want a woosh effect, but you also want 30-40 variations of a
+                    woosh, or else your library will get stale, and fast.</p>
+            </div>
+        </div>
+
+        <div class="container-content">
+            <div class="content-left">
+                <img src="img/network.svg" class="featureicon">
+            </div>
+            <div class="content-right">
+                <p><b>Sharing</b> - We believe that a great sound design library has an array of original concepts, and many
+                    slight variations on those concepts. You want a woosh effect, but you also want 30-40 variations of a
+                    woosh, or else your library will get stale, and fast.</p>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>

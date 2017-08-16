@@ -36,6 +36,9 @@ Butterfly.prototype.display = function() {
   line(this.x1, this.y1, this.position.x, this.position.y);
   this.x1=this.position.x;
   this.y1=this.position.y;
+  fill(255,124, 26);
+  ellipse(this.x1, this.y1,14,14);
+  ellipse(this.position.x, this.position.y,14,14);
 
 };
 

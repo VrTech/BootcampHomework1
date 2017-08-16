@@ -10,9 +10,9 @@ var Line = function(position,width,height,duration) {
 
   this.Timer = 0;
 
-  this.YOffset = 25;
+  this.YOffset = height/3;
   this.XOffset = 25;
-  this.Length = 200;
+  this.Length = width;
 };
 
 Line.prototype.run = function() {
@@ -31,12 +31,13 @@ Line.prototype.update = function(){
 // Method to display
 Line.prototype.display = function() {
   
-  stroke(61,153,148);
-  strokeWeight(10);
+  stroke(120,153,148);
+  strokeWeight(height/32);
   strokeCap(ROUND);
   line( (this.X + this.Length) - this.XOffset,height/2 - this.YOffset,this.X - this.XOffset,height/2-this.YOffset);
   line( (this.X + this.Length) - this.XOffset,height/2               ,this.X -      this.XOffset,height/2);
   line( (this.X + this.Length) - this.XOffset,height/2 + this.YOffset,this.X - this.XOffset,height/2+this.YOffset);
+  
 };
 
 // Is the Line still useful?

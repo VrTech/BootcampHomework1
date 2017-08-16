@@ -18,23 +18,35 @@ var song = [
   { note: "A", duration: 1500 - Speed },
   { note: "W", duration: 600 - Speed },
   { note: "A", duration: 900 - Speed },
-
 ];
+
 var index = 0;
 var CurrentKey;
-var isAutoplay = true;
+var isAutoplay = false;
+var isPlayback = false;
+var StartPlaying = false;
 
 var Boxes;
 var Circles;
 var Lines;
 var Butterflies;
+var Fades;
+var Triangles;
 
-var GON = 3;
-var Timer = 0;
+var RecordedKeys, RecordedDuration;
+var Keys;
+var Timer, LastKeyTime;
 
 function setup() {
 
-  var cnv = createCanvas(800, 400);
+  RecordedKeys = [];
+  RecordedDuration = [];
+  Keys = [];
+  Timer = 0;
+
+  frameRate(60);
+
+  var cnv = createCanvas(windowWidth, windowHeight);
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
@@ -43,16 +55,19 @@ function setup() {
   Circles = new Circles();
   Lines = new Lines();
   Butterflies = new Butterflies();
-
+  Fades = new Fades();
+  Triangles = new Triangles();
 }
 
 function draw() {
   background(200);
 
+  Fades.run();
   Boxes.run();
   Circles.run();
   Lines.run();
   Butterflies.run();
+  Triangles.run();
 
   // Timer += 0.01;
   // var a = EasingFunctions.easeInOutCubic(Timer);
@@ -86,30 +101,47 @@ function draw() {
   //  }
   //}
 
-  //autoplay();
+  // playback();
+  autoplay();
+  if (StartPlaying) {
+    Timer++;
+    if (!isAutoplay) {
+      LastKeyTime++;
+    }
+  }
 
 }
+
+// function playback() {
+
+//   if (isPlayback) {
+
+//     if (Timer >= RecordedKeys.length) {
+//       isPlayback = false;
+//       return;
+//     }
+
+//     key = RecordedKeys[Timer];
+//     keyTyped();
+//     Timer++;
+//   }
+
+// }
 
 function autoplay() {
 
   if (isAutoplay) {
-
-    if (index >= song.length) {
-      isAutoplay = false;
-      return;
+    print(Timer + " " + Keys.length);
+    if (Timer >= Keys.length) {
+      Timer = -LastKeyTime;
+      //isAutoplay = false;
+      //return;
     }
 
-    if (index != CurrentKey) {
-      CurrentKey = index;
-      key = song[index].note;
-      keyTyped();
-      console.log(index);
-      if (song[index].duration > 0) {
-        setTimeout(function () {
-          index++;
-        }, song[index].duration);
-      }
-    }
+    if (Keys[Timer] == '') return;
+    key = Keys[Timer];
+    keyTyped();
+
 
 
   }
